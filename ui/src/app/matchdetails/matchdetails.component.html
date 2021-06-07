@@ -1,0 +1,25 @@
+<label>day</label>
+<input type="text" #day >
+<label>month</label>
+<input type="text" #month >
+<label>year</label>
+<input type="text" #year >
+<button (click)="getdate(day.value,month.value,year.value)">search</button>
+<button (click)="refresh()">back</button>
+<table>
+  <tr>
+    <th *ngFor="let column of headers">
+      {{column}}
+
+
+    </th>
+  </tr>
+  <tr *ngFor = "let row of rows">
+    <td *ngFor = "let column of headers">
+      {{row[column]}}
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+

@@ -1,0 +1,19 @@
+<input type="button" (click)="postData()" value="random match">
+<input type="button" (click)="postData1()" value="sort goal">
+<input type="button" (click)="postData2()" value="sort wins">
+
+
+<table>
+  <tr>
+    <th *ngFor="let column of headers">
+      {{column}}
+
+
+    </th>
+  </tr>
+  <tr *ngFor = "let row of rows">
+    <td *ngFor = "let column of headers">
+      {{row[column]}}
+    </td>
+  </tr>
+</table>
